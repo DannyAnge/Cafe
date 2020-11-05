@@ -1,0 +1,65 @@
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800 border-bottom">Fincas</h1>
+          <p class="mb-4 d-flex justify-content-end">
+            <a href="<?= BASE_URL ?>productos/add" class="btn btn-secondary btn-icon-split">
+              <span class="icon text-white-50">
+                <i class="fas fa-file"></i>
+              </span>
+              <span class="text">Agregar Fincas</span>
+            </a>
+          </p>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <?= $this->titulo ?>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered text-center nuevosProductos" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>NOMBRE</th>
+                      <th>PROPIETARIO</th>
+                      <th>DIRECCION</th>
+                      <th colspan="2">ACCIONES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?= $this->contenido ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Logout Modal-->
+  <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form action="" method="post" class="form" id="formEdit">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Actualizar finca</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+    
+              <div class="form-group"><label for="id">Id</label><input type="text" name="id" id="id" class="form-control" placeholder="id"></div>
+              <div class="form-group"><label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"></div>
+              <div class="form-group"><label for="description">Propietario</label><input type="text" name="propietario" id="propietario" class="form-control" placeholder="Propietario"></div>
+              <div class="form-group"><label for="precio">direccion</label><input type="text" name="direccion" id="direccion" class="form-control" placeholder="Direccion"></div>
+              
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
