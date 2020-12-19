@@ -17,7 +17,7 @@
             ));
         }
 
-        public function updProducto($id,$nombre,$propietario,$direccion){
+        public function actualizarProductos($id,$nombre,$propietario,$direccion){
             $this->_db->prepare("UPDATE fincas set nombre = :nom, propietario = :prop ,direccion = :dir WHERE id = :id")->execute(array(
                 "id"  => $id,
                 "nom" => $nombre,
@@ -26,9 +26,12 @@
             ));
         }
 
-        public function elim($id){
-            $this->_db->prepare("DELETE FROM fincas WHERE id = :id")->execute(array("id" => $id));
-        }
+        public function eliminar($id){
+        $this->_db->prepare('DELETE FROM fincas WHERE id =:id')->execute(
+            array(
+                'id'=>$id,
+            ));
+    }
     }
     ?>
 

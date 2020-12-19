@@ -1,7 +1,6 @@
 <?php
 
-define("APP_NOMBRE","Cafe");
-define('BASE_URL','http://localhost/cafeDanny/');
+define('BASE_URL','http://localhost/danny_git/CafeDanny/');
 define('DEFAULT_CONTROLLER','index');
 define('PLANTILLA',BASE_URL.'Views/plantilla/');
 

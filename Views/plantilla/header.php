@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Ferreteria</title>
+  <title>Finca</title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= PLANTILLA ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,18 +23,19 @@
 </head>
 
 <body id="page-top">
+<?php if(Accesos::getDatos('validados')) {
 
+?>
   <!-- Page Wrapper -->
   <div id="wrapper">
-
+  
     <?php include "sidebar.php"; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
-      <!-- Main Content -->
+  <!-- Main Content -->
       <div id="content">
-
+ 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -42,7 +43,8 @@
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
-
+    
+      
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
@@ -54,6 +56,8 @@
               </div>
             </div>
           </form>
+
+          
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -219,3 +223,4 @@
         <!-- End of Topbar -->
         <!-- Begin Page Content -->
 <div class="container-fluid">
+<?php } ?>

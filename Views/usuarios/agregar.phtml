@@ -1,0 +1,43 @@
+<br><br>
+<?php if (Accesos::getDatos('validados')) {
+
+  
+?>
+ <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Formulario de registro</h3>
+              </div>
+              <form action="" method="post">
+                <input type="hidden" name="agregar" value="1">
+                <div class="card-body">
+                  <div class="row">
+                  <div class="col-4">
+                  <input type="hidden" class="form-control" id="id" name="id" placeholder="Ingrese el nombre" required>
+                    <label for="exampleInputPassword1">Nombre </label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+                  </div>
+                  <div class="col-4">
+                    <label for="">Password</label>
+                    <input type="text" class="form-control" id="password" name="password" placeholder="Ingrese el password" required>
+                   <div class="progress progress-xxs">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  </div>
+                  <div class="col-4">
+                    
+                  </div><br>
+          
+                  <input estado="false"  disabled="disabled"  class="btn btn-info"  type="submit" id="btnAgregar">
+                </div>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php } ?>

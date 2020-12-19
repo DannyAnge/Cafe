@@ -1,0 +1,133 @@
+<div class="modal fade" id="modalEditarusr">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title font-weight-normal">Actualizar Usuario</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="formEditusr" method="post" class="form" >
+                <input type="hidden" name="editar" value="1">
+                <div class="card-body">
+                  <input type="hidden" class="form-control" id="idtbUsuarios" name="idtbUsuarios">
+                  <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Nombre:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                  </div>
+
+                 <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Password:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="contrasenia" name="contrasenia">
+                    </div>
+                  </div>
+
+                  <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Estado:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="estado" name="estado">
+                    </div>
+                  </div>
+                   <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Nivel:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="tbGrupoUs_idtbGrupoUs" name="tbGrupoUs_idtbGrupoUs">
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between table">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+       <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Usuarios</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Usuarios</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <div class="content">
+      <div class="container-fluid">
+    <a href="<?= BASE_URL ?>usuarios/agregar" class="btn btn-secondary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Agregar Nuevo</span>
+        </a>
+        <div class="row mr-7">
+          <div class="col-lg-10"><br>
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Lista de usuarios registrados</h3>
+              </div>
+              <div class="card-body">
+                <table id="e" class="table table-bordered table-striped">
+                  <thead>
+                    <tr> 
+                      <th class="text-center">#</th>
+                      <th class="text-center">Nombre</th>
+                      
+                      <th class="text-center">Password</th>
+                      
+                      <th class="text-center">Accion</th> 
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <?=$this->tabla ?>
+                  </tbody>
+                   <tfoot>
+                  <tr>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Nombre</th>
+
+                    <th class="text-center">Password</th>
+              
+                    <th class="text-center">Accion</th> 
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+

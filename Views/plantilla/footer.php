@@ -1,3 +1,6 @@
+<?php if(Accesos::getDatos('validados')) {
+
+?>
 
 </div>
 <!-- /.container-fluid -->
@@ -39,11 +42,12 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="<?= BASE_URL?>login/salir">Logout</a>
         </div>
       </div>
     </div>
   </div>
+  <?php   } ?>
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?= PLANTILLA ?>vendor/jquery/jquery.min.js"></script>
@@ -62,6 +66,8 @@
   <script src="<?= PLANTILLA ?>js/demo/datatables-demo.js"></script>
   <script src="<?= PLANTILLA ?>js/funciones.js"></script>
   <script src="<?= PLANTILLA ?>js/sweetalert2.js"></script>
+  <script src="<?= PLANTILLA ?>js/jquery.complexify.banlist.js"></script>
+<script src="<?= PLANTILLA ?>js/jquery.complexify.js"></script>
 
 </body>
 

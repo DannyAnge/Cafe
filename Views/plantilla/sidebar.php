@@ -1,3 +1,6 @@
+<?php if(Accesos::getDatos('validados')) {
+
+?>
 <!-- Sidebar -->
 <ul class="navbar-nav sidebar sidebar-dark accordion" style="background:rgba(10,10,30,1)" id="accordionSidebar">
 
@@ -42,6 +45,11 @@
     <i class="fas fa-fw fa-dollar-sign"></i>
     <span>Fincas</span></a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="<?= BASE_URL ?>usuarios">
+    <i class="fas fa-fw fa-user"></i>
+    <span>Usuario</span></a>
+</li>
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item">
@@ -81,3 +89,4 @@
 
 </ul>
 <!-- End of Sidebar -->
+<?php }?>

@@ -30,6 +30,7 @@
         }
 
         public function index(){
+            Accesos::acceso('admin');
             $this->_view->titulo = '
                 <h6 class="m-0 font-weight-bold text-primary"><span class="fas fa-table"></span> Información General de los productos</h6>
             ';
@@ -41,15 +42,16 @@
             $this->_view->renderizar("index");
         }
 
-        public function edit(){
-            $id = $this->getTexto("id");
-            $nombre = $this->getTexto("nombre");
-            $propietario = $this->getTexto("propietario");
-            $direccion = $this->getTexto("direccion");
-            $this->productos->updProducto($id,$nombre,$propietario,$direccion);
-
-            echo $this->generarTabla();         
-        }
+        
+            public function edit(){
+           
+            $id=$this->getTexto('id');
+            $nombre=$this->getTexto('nombre');
+            $propietario=$this->getTexto('propietario');
+            $direccion=$this->getTexto('direccion');
+            $this->productos->actualizarProductos($id,$nombre,$propietario,$direccion);
+        echo $this->generarTabla();
+    }
 
         public function add(){
             if($this->getTexto("add") == "1"){
@@ -57,7 +59,7 @@
                 $propietario = $this->getTexto("propietario");
                 $direccion = $this->getTexto("direccion");
                 $this->productos->addProducto($nombre,$propietario,$direccion);
-                $this->redireccionar("productos/index");
+                $this->redireccionar("productos/");
             }
 
             $this->_view->renderizar("agregarProducto");
@@ -65,7 +67,9 @@
 
         public function eliminar(){
             $id = $this->getTexto("id");
-            $this->productos->elim($id);
+            $this->productos->eliminar($id);
             echo $this->generarTabla();
+            $this->renderizar("productos/");
         }
+        
     }
